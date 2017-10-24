@@ -1,0 +1,7 @@
+.paragraph {
+	color: blue;
+}
+
+.paragraph, form {
+	margin-left: 20px;
+}

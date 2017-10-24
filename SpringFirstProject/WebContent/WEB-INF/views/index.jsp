@@ -20,7 +20,7 @@
 	<h1 class="paragraph">Hello world!</h1>
 	<h1 class="paragraph">Welcome to ${user}</h1>
 	<form action="logout">
-		<input class="btn-danger" id="logout-btn" type="submit" value="Logout"></input>
+		<input class="btn btn-danger" id="logout-btn" type="submit" value="Logout"></input>
 	</form>
 </body>
 </html>
