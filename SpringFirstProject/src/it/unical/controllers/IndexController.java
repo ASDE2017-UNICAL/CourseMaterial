@@ -10,7 +10,6 @@ public class IndexController {
 	@RequestMapping("/index")
 	public String homePage(Model model) {
 		//handle home page requests
-		model.addAttribute("welcomeMessage", "Benvenuto!");
 		return "index";
 	}
 
