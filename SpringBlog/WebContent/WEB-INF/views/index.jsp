@@ -29,6 +29,15 @@ footer {
 
 <script type="text/javascript">
 	$(document).ready(function() {
+		$("#ajaxTest").click(function() {
+			$.ajax({
+				url : "ajaxRequest",
+				success : function(result) {
+					$("#ajaxContent").html(result);
+				}
+			});
+		});
+
 		if ($(window).width() > 767) {
 			$("#sidenav").height($("#posts").height());
 		}
@@ -65,6 +74,9 @@ footer {
 					<small>RECENT POSTS</small>
 				</h4>
 				<hr>
+				<button id="ajaxTest" class="btn btn-danger">AJAX TEST</button>
+				<hr>
+				<div id="ajaxContent"></div>
 
 				<c:forEach items="${posts}" var="post">
 					<h2>${post.title}</h2>
