@@ -1,6 +1,5 @@
 package it.unical.asde.hibernate_first_example.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 
 
 @Entity
@@ -23,7 +26,8 @@ public class Book {
 	@Column(name = "title", nullable = false, unique = true)
 	private String title;
 
-	@ManyToOne(cascade={CascadeType.PERSIST})
+	@ManyToOne
+	@Cascade(value=CascadeType.SAVE_UPDATE)
 	@JoinColumn(nullable = false)
 	private Author author;
 

@@ -22,14 +22,19 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>5.2.11.Final</version>
+			<version>5.2.10.Final</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/hsqldb/hsqldb -->
-		<dependency>
+		<!--<dependency>
 			<groupId>hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<version>1.8.0.10</version>
 			<scope>test</scope>
+		</dependency>-->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.194</version>
 		</dependency>
 
 
