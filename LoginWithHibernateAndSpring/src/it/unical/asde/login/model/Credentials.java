@@ -16,7 +16,7 @@ public class Credentials {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	@Column
+	@Column(unique=true)
 	private String username;
 
 	@Column
