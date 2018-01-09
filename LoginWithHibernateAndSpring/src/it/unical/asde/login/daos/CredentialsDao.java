@@ -1,7 +1,5 @@
 package it.unical.asde.login.daos;
 
-import javax.annotation.PostConstruct;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -15,12 +13,6 @@ public class CredentialsDao {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-
-	@PostConstruct
-	public void init() {
-		saveCredentials(new Credentials("ciccio", "ciccio"));
-		saveCredentials(new Credentials("pippo", "pippo"));
-	}
 
 	public boolean credentialsExist(String username, String password) {
 
